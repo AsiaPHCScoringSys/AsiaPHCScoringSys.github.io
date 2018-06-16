@@ -3977,7 +3977,7 @@ th {
 		display: -ms-flex;
 		display: flex;
 		border-bottom: solid 5px #f56a6a;
-		padding: 6em 0 1em 0;
+		padding: 1em 0 1em 0;
 		position: relative;
 	}
 
@@ -4011,7 +4011,7 @@ th {
 		@media screen and (max-width: 736px) {
 
 			#header {
-				padding-top: 6.5em;
+				padding-top: 2.5em;
 			}
 
 				#header .logo {

@@ -1,18 +1,24 @@
 <!DOCTYPE HTML>
 <!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Editorial by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 
 <head>
-	<title>榮總智慧醫療系統</title>
-    <meta name="description" content="Scoring system to Predict Hepatocellular Carcinoma in Asians on Antivirals for Chronic Hepatitis B">
+    <title>榮總智慧醫療系統</title>
+    <meta name="description" content="A Risk Score to Predict the Annually Changing Incidence of Hepatocellular Carcinoma in Previously Untreated Asian Patients on Antiviral Therapy for Chronic Hepatitis B ">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style type="text/css">
+    .sectionTitle {
+        text-decoration: underline;
+        font-weight: 700;
+    }
+    </style>
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 </head>
@@ -25,109 +31,143 @@
             <div class="inner">
                 <!-- Header -->
                 <header id="header">
-                    <a href="index.html" class="logo"><strong>榮總智慧醫療系統</strong></a>
+                    <a href="index.html" class="logo"><strong>智慧醫療系統</strong></a>
                     <ul class="icons">
                         <!-- <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li> -->
                         <!-- <li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li> -->
                     </ul>
-                    <span style="text-align:right">Developed by Chun-Ying Wu</span>
+                    <span style="text-align:right">Chun-Ying Wu</span>
                 </header>
                 <!-- Banner -->
                 <section id="banner">
                     <div class="content">
                         <header>
-                            <h1>台北榮總智慧系統</h1>
-                            <span><strong>Scoring system to Predict Hepatocellular Carcinoma in Asians on Antivirals for Chronic Hepatitis B</strong></span>
+                            <h2>Predicting HCC incidence in CHB on therapy</h2>
+                            <span><strong>Individual Decision Making Support Tool</strong></span>
                         </header>
                     </div>
                 </section>
                 <section>
                     <form id="ScoringSys" class="row uniform">
                         <div class="12u 12u$(small)">
-                            <h3>1. 是否有肝硬化（cirrhosis）</h3>
-                            <div class="row uniform">
-                                <div class="1u 12u$(small)"></div>
-                                <div class="2u 6u$(small)">
-                                    <input type="radio" id="cirrhosis-Y" name="cirrhosis" value="6" checked>
-                                    <label for="cirrhosis-Y">有肝硬化</label>
-                                </div>
-                                <div class="2u 6u$(small)">
-                                    <input type="radio" id="cirrhosis-N" name="cirrhosis" value="0">
-                                    <label for="cirrhosis-N">沒有肝硬化</label>
-                                </div>
-                            </div>
+                            <h2 class="sectionTitle">Enter Your Data：</h2>
                         </div>
                         <div class="12u 12u$(small)">
-                            <h3>2. 是否有糖尿病（Diabetes Mellitus）</h3>
-                            <!-- Y/N -->
-                            <div class="row uniform">
-                                <div class="1u 12u$(small)"></div>
-                                <div class="2u 6u$(small)">
-                                    <input type="radio" id="diabetes-Y" name="diabetes" value="1" checked>
-                                    <label for="diabetes-Y">有糖尿病</label>
-                                </div>
-                                <div class="2u 6u$(small)">
-                                    <input type="radio" id="diabetes-N" name="diabetes" value="0">
-                                    <label for="diabetes-N">沒有糖尿病</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="12u 12u$(small)">
-                            <h3>3. 年齡（Age）</h3>
-                            <!-- <-40/50/60-> -->
-                            <div class="row uniform">
-                                <div class="1u 12u$(small)"></div>
-                                <div class="2u 3u$(small)">
-                                    <input type="radio" id="u40" name="age" value="0" checked="">
-                                    <label for="u40">40以下</label>
-                                </div>
-                                <div class="2u 3u$(small)">
-                                    <input type="radio" id="4050" name="age" value="5">
-                                    <label for="4050">40到50</label>
-                                </div>
-                                <div class="2u 3u$(small)">
-                                    <input type="radio" id="5060" name="age" value="8">
-                                    <label for="5060">50到60</label>
-                                </div>
-                                <div class="2u 3u$(small)">
-                                    <input type="radio" id="60u" name="age" value="10">
-                                    <label for="60u">60以上</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="12u 12u$(small)">
-                            <h3>4. 性別（Gender）</h3>
                             <!-- Male/Female -->
                             <div class="row uniform">
-                                <div class="1u 12u$(small)"></div>
-                                <div class="2u 6u$(small)">
-                                    <input type="radio" id="gender-m" name="gender" value="2" checked="">
-                                    <label for="gender-m">男（Ｍ）</label>
+                                <div class="6u 12u$(small)">
+                                    <h3>1. 性別（Gender）</h3>
                                 </div>
-                                <div class="2u 6u$(small)">
+                                <div class="6u 12u$(small)">
+                                    <input type="radio" id="gender-m" name="gender" value="2" checked="">
+                                    <label for="gender-m">男（Male）</label>
                                     <input type="radio" id="gender-f" name="gender" value="0">
-                                    <label for="gender-f">女（Ｆ）</label>
+                                    <label for="gender-f">女（Female）</label>
                                 </div>
                             </div>
                         </div>
-                        <!-- 計算出對應的Risk Score，並分類出高中低風險（對應Score 8<,8-13,>13）呈現給醫師外，還有其他要注意/補充的地方嗎？ -->
+                        <div class="12u 12u$(small)">
+                            <div class="row uniform">
+                                <div class="6u 12u$(small)">
+                                    <h3>2. 是否有糖尿病呢（Diabetes Mellitus）？</h3></div>
+                                <div class="6u 12u$(small)">
+                                    <input type="radio" id="diabetes-Y" name="diabetes" value="1" checked>
+                                    <label for="diabetes-Y">有（Ｙ）</label>
+                                    <input type="radio" id="diabetes-N" name="diabetes" value="0">
+                                    <label for="diabetes-N">沒有（N）</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="12u 12u$(small)">
+                            <!-- Male/Female -->
+                            <div class="row uniform">
+                                <div class="6u 12u$(small)">
+                                    <h3>3. 是否有高血脂（Hyperlipidemia）？</h3>
+                                </div>
+                                <div class="6u 12u$(small)">
+                                    <input type="radio" id="hyperlipidemia-y" name="hyperlipidemia" value="1" checked="">
+                                    <label for="hyperlipidemia-y">有（Ｙ）</label>
+                                    <input type="radio" id="hyperlipidemia-n" name="hyperlipidemia" value="0">
+                                    <label for="hyperlipidemia-n">沒有（N）</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="12u 12u$(small)">
+                            <div class="row uniform">
+                                <div class="6u 12u$(small)">
+                                    <h3>4. 是否有肝硬化（Liver cirrhosis）？</h3></div>
+                                <div class="6u 12u$(small)">
+                                    <input type="radio" id="cirrhosis-Y" name="cirrhosis" value="6" checked>
+                                    <label for="cirrhosis-Y">有（Ｙ）</label>
+                                    <input type="radio" id="cirrhosis-N" name="cirrhosis" value="0">
+                                    <label for="cirrhosis-N">沒有（N）</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="12u 12u$(small)">
+                            <div class="row uniform">
+                                <div class="2u 12u$(small)">
+                                    <h3>5. 年紀（Age）
+                                    </h3></div>
+                                <!-- <input class="4u 8u$(small)" type="number" name="age" placeholder="Please Key in Patient's Age" style="border:0px;border-bottom:1px solid;"> -->
+                                <div class="2u 12u$(small)">
+                                    <input type="radio" id="u40" name="age" value="0" checked="">
+                                    <label for="u40">40歲以下</label>
+                                    <input type="radio" id="4050" name="age" value="5">
+                                    <label for="4050">40到50歲</label>
+                                </div>
+                                <div class="2u 12u$(small)">
+                                    <input type="radio" id="5060" name="age" value="8">
+                                    <label for="5060">50到60歲</label>
+                                    <input type="radio" id="60u" name="age" value="10">
+                                    <label for="60u">60歲以上</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="12u 12u$(small)">
+                            <div class="row uniform">
+                                <div class="2u 12u$(small)">
+                                    <h3>6. Duration on treatment</h3>
+                                </div>
+                                <div class="2u 12u$(small)">
+                                    <input type="radio" id="t1" name="treatment-duration" value="0" checked="">
+                                    <label for="t1">第一年</label>
+                                    <input type="radio" id="t2" name="treatment-duration" value="-2">
+                                    <label for="t2">第二年</label>
+                                    <input type="radio" id="t3" name="treatment-duration" value="-3">
+                                    <label for="t3">大於第三年</label>
+                                </div>
+                            </div>
                     </form>
-                    <ul class="actions 12u 12u$(small)" style="text-align: center">
+                    <ul class="actions 12u 12u$(small)" style="text-align: center;margin:1em 0;">
                         <li>
-                            <a id="cal" class="button special">計算風險值</a>
+                            <a id="cal" class="button special">計算 </a>
                         </li>
                     </ul>
+                    <hr class="major">
                     <div class="row uniform">
                         <div class="12u 12u$(small)">
-                            <h2>計算結果</h2>
+                            <h2 class="sectionTitle">HCC incidence prediction risk</h2>
                         </div>
                         <div class="1u 11u$(small)"></div>
                         <div class="11u 11u$(small)">
-                            <h3>風險程度：<span id="outcome" style="color:#f56a6a">尚未計算</span></h3>
+                            <h3>DACADS Score： <span id="outcome-score" style="color:#f56a6a">0</span></h3>
                         </div>
                         <div class="1u 11u$(small)"></div>
                         <div class="11u 11u$(small)">
-                            <h3>風險指數：<span id="outcome-score" style="color:#f56a6a">0</span></h3>
+                            <h3>3-Year Risk ： <span id="outcome-score-3y" style="color:#f56a6a">0</span>％</h3>
+                            <h3>5-Year Risk ： <span id="outcome-score-5y" style="color:#f56a6a">0</span>％</h3>
+                        </div>
+                    </div>
+                    <hr class="major">
+                    <div class="row uniform">
+                        <div class="12u 12u$(small)">
+                            <h2 class="sectionTitle">Recommendation</h2>
+                        </div>
+                        <div class="1u 11u$(small)"></div>
+                        <div class="11u 11u$(small)">
+                            <h3>您的風險指數屬於<span id="risk-ratio" style="color:#f56a6a"></span></h3>
+                            <h3><span id="recom-1" style=""></span></h3>
                         </div>
                     </div>
                 </section>
@@ -144,24 +184,132 @@
     $(document).ready(function() {
         $('#cal').on('click', function() {
             let TotalScoring = 0;
+            let ageScore = Number($('#ScoringSys input[name="age"]:checked').val());
+            // let ageScore = 0;
+            // if (ageValue < 40) {
+            //     ageScore = 0;
+            // } else if (40 <= ageValue && ageValue < 50) {
+            //     ageScore = 5;
+            // } else if (50 <= ageValue && ageValue < 60) {
+            //     ageScore = 8;
+            // } else if (60 <= ageValue) { ageScore = 10; };
             let cirScore = Number($('#ScoringSys input[name="cirrhosis"]:checked').val());
             let diaScore = Number($('#ScoringSys input[name="diabetes"]:checked').val());
             let genScore = Number($('#ScoringSys input[name="gender"]:checked').val());
-            let ageScore = Number($('#ScoringSys input[name="age"]:checked').val());
+            let treDruScore = Number($('#ScoringSys input[name="treatment-duration"]:checked').val());
             let cirScorePlus = 0;
-            if (cirScore == 6 && ageScore == 0) { cirScorePlus = 4 } else { cirScorePlus = 0 };
-            TotalScoring = cirScore + cirScorePlus + diaScore + genScore + ageScore;
+            if (cirScore == 6 && ageScore == 0) { cirScorePlus = 3 } else { cirScorePlus = 0 };
+            TotalScoring = cirScore + cirScorePlus + diaScore + genScore + ageScore + treDruScore;
 
 
-            console.log(TotalScoring);
             $('#outcome-score').text(TotalScoring);
 
+            let value3y, value5y;
+            switch (TotalScoring) {
+                case -3:
+                    value3y = 0.04;
+                    value5y = 0.04;
+                    break;
+                case -2:
+                    value3y = 0.04;
+                    value5y = 0.05;
+                    break;
+                case -1:
+                    value3y = 0.05;
+                    value5y = 0.07;
+                    break;
+                case 0:
+                    value3y = 0.07;
+                    value5y = 0.09;
+                    break;
+                case 1:
+                    value3y = 0.07;
+                    value5y = 0.11;
+                    break;
+                case 2:
+                    value3y = 0.09;
+                    value5y = 0.13;
+                    break;
+                case 3:
+                    value3y = 0.13;
+                    value5y = 0.17;
+                    break;
+                case 4:
+                    value3y = 0.16;
+                    value5y = 0.24;
+                    break;
+                case 5:
+                    value3y = 0.21;
+                    value5y = 0.28;
+                    break;
+                case 6:
+                    value3y = 0.27;
+                    value5y = 0.35;
+                    break;
+                case 7:
+                    value3y = 0.35;
+                    value5y = 0.47;
+                    break;
+                case 8:
+                    value3y = 0.44;
+                    value5y = 0.58;
+                    break;
+                case 9:
+                    value3y = 0.59;
+                    value5y = 0.81;
+                    break;
+                case 10:
+                    value3y = 0.84;
+                    value5y = 0.95;
+                    break;
+                case 11:
+                    value3y = 0.96;
+                    value5y = 1.20;
+                    break;
+                case 12:
+                    value3y = 1.34;
+                    value5y = 1.52;
+                    break;
+                case 13:
+                    value3y = 1.62;
+                    value5y = 2.19;
+                    break;
+                case 14:
+                    value3y = 2.10;
+                    value5y = 2.90;
+                    break;
+                case 15:
+                    value3y = 2.84;
+                    value5y = 4.03;
+                    break;
+                case 16:
+                    value3y = 3.82;
+                    value5y = 4.73;
+                    break;
+                case 17:
+                    value3y = 4.55;
+                    value5y = 5.41;
+                    break;
+                case 18:
+                    value3y = 4.55;
+                    value5y = 7.12;
+                    break;
+                case 19:
+                    value3y = 7.62;
+                    value5y = 8.50;
+            };
+            $('#outcome-score-3y').text(value3y);
+            $('#outcome-score-5y').text(value5y);
+
             if (TotalScoring < 8) {
-                $('#outcome').text('低度風險');
+                $('#risk-ratio').text('低度')
+                $('#recom-1').text('恭喜您！不過也提醒，仍有固定的風險、作息飲食仍要注意喔！')
             } else if (TotalScoring > 13) {
-                $('#outcome').text('高度風險');
+                $('#risk-ratio').text('高度');
+                $('#recom-1').text('建議您、接受進一步CT或MRI檢查。')
             } else if (TotalScoring < 14 && TotalScoring > 7) {
-                $('#outcome').text('中度風險');
+                $('#risk-ratio').text('中度');
+                $('#recom-1').text('建議您，三到六個月再追蹤一次喔！')
             };
         });
     });
