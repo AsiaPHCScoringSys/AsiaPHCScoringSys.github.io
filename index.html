@@ -32,13 +32,25 @@
     [type=radio]:checked+label {
         background-color: #f56a6a;
         border-radius: 0.375em;
-        color:#ffffff;
+        color: #ffffff;
         z-index: 1;
     }
-    input[type="checkbox"] + label, input[type="radio"] + label{
+
+    input[type="checkbox"]+label,
+    input[type="radio"]+label {
         padding: 0 1em;
-        position: initial; 
+        position: initial;
         font-size: 1.8em
+    }
+    #explanTable {
+        font-size:2em;
+    }
+    #explanTable th{
+        text-align: center;
+        padding: 0 0.75em;
+    }
+    #explanTable td{
+        padding: 0 0.75em;
     }
     </style>
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -159,16 +171,17 @@
                     </div>
                     <hr class="major">
                 </section>
-                <section id="banner-2" style="display: none;padding: ">
+                <section id="banner-2" style="display: none;">
                     <div class="row uniform">
                         <div class="12u 12u$(small)">
                             <span class="sectionTitle questionTitle">肝癌預測發生機率</span>
                         </div>
                         <div class="12u 12u$(small)">
-                            <!-- <h3>DACADS Score： <span id="outcome-score" style="color:#f56a6a">0</span></h3> -->
-                            <span class="sectionTitle questionTitle">3年內： <span id="outcome-score-3y" style="color:#f56a6a">0</span>％</span>
+                            <span class="questionTitle">分數： <span id="outcome-score" style="color:#f56a6a">0</span></span>
                             <br>
-                            <span class="sectionTitle questionTitle">5年內： <span id="outcome-score-5y" style="color:#f56a6a">0</span>％</span>
+                            <span class="questionTitle">3年內： <span id="outcome-score-3y" style="color:#f56a6a">0</span>％</span>
+                            <br>
+                            <span class="questionTitle">5年內： <span id="outcome-score-5y" style="color:#f56a6a">0</span>％</span>
                         </div>
                     </div>
                     <hr class="major" style="margin:1em">
@@ -176,15 +189,103 @@
                         <div class="12u 12u$(small)">
                             <span＝ class="sectionTitle questionTitle">建議</span>
                         </div>
-                        <div class="1u 11u$(small)"></div>
                         <div class="11u 11u$(small)">
-                            <h3>您的風險指數屬於<span id="risk-ratio" style="color:#f56a6a"></span></h3>
-                            <h3><span id="recom-1" style=""></span></h3>
+                            <span class="questionTitle">您的風險指數屬於<span id="risk-ratio" style="color:#f56a6a"></span><span id="recom-1" style=""></span></span>
                         </div>
                     </div>
-                    <ul class="actions row" style="text-align: center;">
-                     <a id="" class="button big" style="font-size:1.5em">重新載入</a>
-                 </ul>
+                    <div class="row uniform" style="text-align: center;">
+                        <ul class="actions">
+                            <a id="" class="button big reCal" style="font-size:1.5em">重新載入</a>
+                            <a id="explainCal" class="button big special" style="font-size:1.5em">計算說明</a>
+                        </ul>
+                    </div>
+                </section>
+                <section id="banner-3" style="display: none;">
+                    <div class="table-wrapper">
+                        <table id="explanTable">
+                            <thead>
+                                <tr>
+                                    <th>性別</th>
+                                    <th>分數</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>男</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>女</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th>年齡</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>40歲以下</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>40-49歲</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>50-59歲</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr>
+                                    <td>60歲以上</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th>糖尿病</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>有</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>沒有</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                            <thead>
+                                <tr>
+                                    <th>高血脂</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>無</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>有，且四十歲以上</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>有，且四十歲以下</td>
+                                    <td>10</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row uniform" style="text-align: center;">
+                        <ul class="actions">
+                            <a id="" class="button big reCal" style="font-size:1.5em">重新載入</a>
+                        </ul>
+                    </div>
                 </section>
             </div>
         </div>
@@ -330,7 +431,19 @@
             $('#banner-1').hide();
             $('#banner-2').fadeIn();
         });
-$('#cal').click();
+        $('.reCal').on('click', function() {
+            $('#banner-2').hide();
+            $('#banner-3').hide();
+            $('#banner-1').fadeIn();
+            $('#ScoringSys')[0].reset();
+        });
+        $('#explainCal').on('click', function() {
+            $('#banner-2').hide();
+            $('#banner-3').fadeIn();
+
+        });
+        $('#cal').click();
+        $('#explainCal').click();
     });
     </script>
 </body>
