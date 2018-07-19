@@ -18,6 +18,28 @@
         text-decoration: underline;
         font-weight: 700;
     }
+
+    .questionTitle {
+        font-size: 2em;
+        color: #3d4449;
+        font-family: "Roboto Slab", serif;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 0 0 0.5em 0;
+        width: 50%;
+    }
+
+    [type=radio]:checked+label {
+        background-color: #f56a6a;
+        border-radius: 0.375em;
+        color:#ffffff;
+        z-index: 1;
+    }
+    input[type="checkbox"] + label, input[type="radio"] + label{
+        padding: 0 1em;
+        position: initial; 
+        font-size: 1.8em
+    }
     </style>
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
@@ -30,81 +52,77 @@
         <div id="main">
             <div class="inner">
                 <!-- Header -->
-                <header id="header">
-                    <a href="index.html" class="logo"><strong>智慧醫療系統</strong></a>
-                    <span style="text-align:right">Chun-Ying Wu</span>
+                <header id="header" style="padding-top:0;">
+                    <a href="index.html" class="logo" style="font-size: 2em"><strong>肝癌風險預測</strong></a>
+                    <!-- <span style="text-align:right">Chun-Ying Wu</span> -->
                 </header>
                 <!-- Banner -->
-                <section id="banner">
+                <section id="banner-1" style="padding:0.5em 0 0 0;">
                     <div class="content">
                         <header>
-                        <h4>Predicting HCC incidence in CHB on therapy</h4>
-                            <span><strong>Individual Decision Making Support Tool</strong></span>
+                            <!-- <p>Predicting HCC incidence in CHB on therapy<span><strong> Individual Decision Making Support Tool</strong></span></p> -->
                         </header>
                     </div>
-                </section>
-                <section>
-                    <form id="ScoringSys" class="row uniform">
-                        <div class="12u 12u$(small)">
-                            <h2 class="sectionTitle">Enter Your Data：</h2>
-                        </div>
+                    <form id="ScoringSys" class="row">
+                        <!-- <div class="12u 12u$(small)"><h2 class="sectionTitle">Enter Your Data：</h2></div> -->
                         <div class="12u 12u$(small)">
                             <!-- Male/Female -->
-                            <div class="row uniform">
+                            <div class="row ">
                                 <div class="6u 12u$(small)">
-                                    <h3>1. 性別（Gender）</h3>
+                                    <span class="questionTitle">1. 性別&emsp;&emsp;&emsp;&emsp;</span>
                                 </div>
                                 <div class="6u 12u$(small)">
-                                    <input type="radio" id="gender-m" name="gender" value="2" checked="">
-                                    <label for="gender-m">男（Male）</label>
+                                    <input type="radio" id="gender-m" name="gender" value="2" checked="" placeholder="">
+                                    <label for="gender-m">男</label>
                                     <input type="radio" id="gender-f" name="gender" value="0">
-                                    <label for="gender-f">女（Female）</label>
+                                    <label for="gender-f">女</label>
                                 </div>
                             </div>
                         </div>
                         <div class="12u 12u$(small)">
-                            <div class="row uniform">
+                            <div class="row">
                                 <div class="6u 12u$(small)">
-                                    <h3>2. 是否有糖尿病呢（Diabetes Mellitus）？</h3></div>
+                                    <span class="questionTitle">2. 是否有糖尿病？</span>
+                                </div>
                                 <div class="6u 12u$(small)">
                                     <input type="radio" id="diabetes-Y" name="diabetes" value="1" checked>
-                                    <label for="diabetes-Y">有（Ｙ）</label>
+                                    <label for="diabetes-Y">有</label>
                                     <input type="radio" id="diabetes-N" name="diabetes" value="0">
-                                    <label for="diabetes-N">沒有（N）</label>
+                                    <label for="diabetes-N">沒有</label>
                                 </div>
                             </div>
                         </div>
                         <div class="12u 12u$(small)">
                             <!-- Male/Female -->
-                            <div class="row uniform">
+                            <div class="row">
                                 <div class="6u 12u$(small)">
-                                    <h3>3. 是否有高血脂（Hyperlipidemia）？</h3>
+                                    <span class="questionTitle">3. 是否有高血脂？&emsp;</span>
                                 </div>
                                 <div class="6u 12u$(small)">
                                     <input type="radio" id="hyperlipidemia-y" name="hyperlipidemia" value="1" checked="">
-                                    <label for="hyperlipidemia-y">有（Ｙ）</label>
+                                    <label for="hyperlipidemia-y">有</label>
                                     <input type="radio" id="hyperlipidemia-n" name="hyperlipidemia" value="0">
-                                    <label for="hyperlipidemia-n">沒有（N）</label>
+                                    <label for="hyperlipidemia-n">沒有</label>
                                 </div>
                             </div>
                         </div>
                         <div class="12u 12u$(small)">
-                            <div class="row uniform">
+                            <div class="row">
                                 <div class="6u 12u$(small)">
-                                    <h3>4. 是否有肝硬化（Liver cirrhosis）？</h3></div>
+                                    <span class="questionTitle">4. 是否有肝硬化？&emsp;</span>
+                                </div>
                                 <div class="6u 12u$(small)">
                                     <input type="radio" id="cirrhosis-Y" name="cirrhosis" value="6" checked>
-                                    <label for="cirrhosis-Y">有（Ｙ）</label>
+                                    <label for="cirrhosis-Y">有</label>
                                     <input type="radio" id="cirrhosis-N" name="cirrhosis" value="0">
-                                    <label for="cirrhosis-N">沒有（N）</label>
+                                    <label for="cirrhosis-N">沒有</label>
                                 </div>
                             </div>
                         </div>
                         <div class="12u 12u$(small)">
-                            <div class="row uniform">
+                            <div class="row">
                                 <div class="6u 12u$(small)">
-                                    <h3>5. 年紀（Age）
-                                    </h3></div>
+                                    <span class="questionTitle">5. 年紀</span></div>
                                 <!-- <input class="4u 8u$(small)" type="number" name="age" placeholder="Please Key in Patient's Age" style="border:0px;border-bottom:1px solid;"> -->
                                 <div class="6u 12u$(small)">
                                     <input type="radio" id="u40" name="age" value="0" checked="">
@@ -119,9 +137,9 @@
                             </div>
                         </div>
                         <div class="12u 12u$(small)">
-                            <div class="row uniform">
+                            <div class="row">
                                 <div class="6u 12u$(small)">
-                                    <h3>6. Duration on treatment</h3>
+                                    <span class="questionTitle">6. 正處於治療的第幾年呢？</span>
                                 </div>
                                 <div class="6u 12u$(small)">
                                     <input type="radio" id="t1" name="treatment-duration" value="0" checked="">
@@ -133,31 +151,30 @@
                                 </div>
                             </div>
                     </form>
-                    <ul class="actions 12u 12u$(small)" style="text-align: center;margin:1em 0;">
-                        <li>
-                            <a id="cal" class="button special">計算 </a>
+                    <ul class="actions row" style="text-align: center;">
+                        <li class="12u 12u$(small)">
+                            <a id="cal" class="button big" style="font-size:1.5em">計算</a>
                         </li>
                     </ul>
                     </div>
                     <hr class="major">
+                </section>
+                <section id="banner-2" style="display: none;padding: ">
                     <div class="row uniform">
                         <div class="12u 12u$(small)">
-                            <h2 class="sectionTitle">HCC incidence prediction risk</h2>
+                            <span class="sectionTitle questionTitle">肝癌預測發生機率</span>
                         </div>
-                        <div class="1u 11u$(small)"></div>
-                        <div class="11u 11u$(small)">
-                            <h3>DACADS Score： <span id="outcome-score" style="color:#f56a6a">0</span></h3>
-                        </div>
-                        <div class="1u 11u$(small)"></div>
-                        <div class="11u 11u$(small)">
-                            <h3>3-Year Risk ： <span id="outcome-score-3y" style="color:#f56a6a">0</span>％</h3>
-                            <h3>5-Year Risk ： <span id="outcome-score-5y" style="color:#f56a6a">0</span>％</h3>
+                        <div class="12u 12u$(small)">
+                            <!-- <h3>DACADS Score： <span id="outcome-score" style="color:#f56a6a">0</span></h3> -->
+                            <span class="sectionTitle questionTitle">3年內： <span id="outcome-score-3y" style="color:#f56a6a">0</span>％</span>
+                            <br>
+                            <span class="sectionTitle questionTitle">5年內： <span id="outcome-score-5y" style="color:#f56a6a">0</span>％</span>
                         </div>
                     </div>
-                    <hr class="major">
+                    <hr class="major" style="margin:1em">
                     <div class="row uniform">
                         <div class="12u 12u$(small)">
-                            <h2 class="sectionTitle">Recommendation</h2>
+                            <span＝ class="sectionTitle questionTitle">建議</span>
                         </div>
                         <div class="1u 11u$(small)"></div>
                         <div class="11u 11u$(small)">
@@ -165,6 +182,9 @@
                             <h3><span id="recom-1" style=""></span></h3>
                         </div>
                     </div>
+                    <ul class="actions row" style="text-align: center;">
+                     <a id="" class="button big" style="font-size:1.5em">重新載入</a>
+                 </ul>
                 </section>
             </div>
         </div>
@@ -306,7 +326,11 @@
                 $('#risk-ratio').text('中度');
                 $('#recom-1').text('建議您，三到六個月再追蹤一次，讓我們一起保持健康：）')
             };
+
+            $('#banner-1').hide();
+            $('#banner-2').fadeIn();
         });
+$('#cal').click();
     });
     </script>
 </body>
