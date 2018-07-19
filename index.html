@@ -20,7 +20,7 @@
     }
 
     .questionTitle {
-        font-size: 2em;
+        font-size: 1.8em;
         color: #3d4449;
         font-family: "Roboto Slab", serif;
         font-weight: 700;
@@ -40,17 +40,21 @@
     input[type="radio"]+label {
         padding: 0 1em;
         position: initial;
-        font-size: 1.8em
+        font-size: 1.5em
     }
     #explanTable {
         font-size:2em;
     }
     #explanTable th{
         text-align: center;
-        padding: 0 0.75em;
+        padding: 0 0.5em;
     }
     #explanTable td{
-        padding: 0 0.75em;
+        padding: 0 1em;
+    }
+    #explanTable td:nth-child(2){
+        text-align: right;
+        padding: 0 1em;
     }
     </style>
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -287,11 +291,11 @@
                                     <td>0</td>
                                 </tr>
                                 <tr>
-                                    <td>有，且四十歲以上</td>
+                                    <td>有，且40歲以上</td>
                                     <td>6</td>
                                 </tr>
                                 <tr>
-                                    <td>有，且四十歲以下</td>
+                                    <td>有，且40歲以下</td>
                                     <td>10</td>
                                 </tr>
                             </tbody>
@@ -458,6 +462,8 @@
             $('#banner-3').fadeIn();
 
         });
+        $('#cal').click();
+        $('#explainCal').click();
     });
     </script>
 </body>
