@@ -42,17 +42,21 @@
         position: initial;
         font-size: 1.5em
     }
+
     #explanTable {
-        font-size:1.8em;
+        font-size: 1.8em;
     }
-    #explanTable th{
+
+    #explanTable th {
         text-align: center;
         padding: 0 0.5em;
     }
-    #explanTable td{
+
+    #explanTable td {
         padding: 0 1em;
     }
-    #explanTable td:nth-child(2){
+
+    #explanTable td:nth-child(2) {
         text-align: right;
         padding: 0 1em;
     }
@@ -108,7 +112,7 @@
                                 </div>
                             </div>
                         </div>
-<!--                         <div class="12u 12u$(small)">
+                        <!--                         <div class="12u 12u$(small)">
                             <div class="row">
                                 <div class="6u 12u$(small)">
                                     <span class="questionTitle">3. 是否有高血脂？&emsp;</span>
@@ -262,7 +266,7 @@
                                     <td>0</td>
                                 </tr>
                             </tbody>
-                             <thead>
+<!--                             <thead>
                                 <tr>
                                     <th>高血脂</th>
                                     <th></th>
@@ -278,7 +282,7 @@
                                     <td>0</td>
                                 </tr>
                             </tbody>
-                            <thead>
+                            <thead> -->
                                 <tr>
                                     <th>肝硬化</th>
                                     <th></th>
@@ -338,6 +342,13 @@
 
 
             $('#outcome-score').text(TotalScoring);
+
+            console.log('cirScore=' + cirScore)
+            console.log(';cirScorePlus=' + cirScorePlus);
+            console.log(';diaScore=' + diaScore);
+            console.log(';genScore=' + genScore);
+            console.log(';ageScore=' + ageScore);
+            console.log(';treDruScore=' + treDruScore);
 
             let value3y, value5y;
             switch (TotalScoring) {
